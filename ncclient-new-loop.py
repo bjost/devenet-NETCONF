@@ -34,16 +34,16 @@ netconf_loopback = """
 <config>
     <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
         <interface>
-        	<name>"101"</name>
-        	<description>"NETCONF added"</description>
+        	<name>Loopback101</name>
+        	<description>NETCONF added</description>
         	<type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
-                "ianaift:softwareLoopback"
+                ianaift:softwareLoopback
             </type>
-        	<enabled>"true"</enabled>
+        	<enabled>true</enabled>
         	<ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
         		<address>
-        			<ip>"10.0.101.1"</ip>
-        			<netmask>"255.255.255.0"</netmask>
+        			<ip>10.0.101.1</ip>
+        			<netmask>255.255.255.0</netmask>
         		</address>
         	</ipv4>
         </interface>
