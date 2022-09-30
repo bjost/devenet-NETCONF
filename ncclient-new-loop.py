@@ -31,23 +31,22 @@ netconf_hostname = """
 """
 
 netconf_loopback = """
-<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+<config>
+    <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
         <interface>
-            <Loopback>
-                <name>101</name>
-                <description>My first NETCONF loopback</description>
-                <ip>
-                    <address>
-                        <primary>
-                            <address>172.16.101.1</address>
-                            <mask>255.255.255.0</mask>
-                        </primary>
-                    </address>
-                </ip>
-            </Loopback>
+            <name>101</name>
+            <description>My first NETCONF loopback</description>
+            <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+                "ianaift:softwareLoopback"
+            </type>
+            <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+                <address>
+                  <ip>172.16.101.1</ip>
+                  <netmask>255.255.255.0</netmask>
+                </address>
+            </ipv4>
         </interface>
-    </native>
+    </interfaces>
 </config>
 """
 
